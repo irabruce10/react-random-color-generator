@@ -100,7 +100,9 @@ export default function App() {
       />
 
       <Card style={{ backgroundColor: color }}>
-        <CardTitle>Generated Color : {color}</CardTitle>
+        <CardTitle style={{ backgroundColor: color }}>
+          Generated Color : {color}
+        </CardTitle>
       </Card>
 
       <Button onClick={colorHandle}>Generate</Button>
