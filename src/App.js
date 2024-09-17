@@ -3,6 +3,7 @@
 import { useState } from 'react';
 import randomColor from 'randomcolor';
 import styled from 'styled-components';
+import chalk from 'chalk';
 
 // Styling for the app
 
@@ -98,9 +99,7 @@ export default function App() {
         onChange={(e) => setLuminosity(e.target.value)}
       />
 
-      <div style={{ background: color }}>
-        <h2>Generated Color:{color}</h2>
-      </div>
+      <div style={{ backgroundColor: color }}>Generated Color:{color}</div>
 
       <Button onClick={colorHandle}>Generate</Button>
     </Wrapper>
