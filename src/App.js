@@ -43,14 +43,14 @@ const Input = styled.input`
   margin-left: 1em;
 `;
 
-const Card = styled.div`
-  border-radius: 4px;
-  box-shadow: 0 2px 4px rgba(0.1, 0.1, 0.1, 0.2);
-  padding: 20px;
-  margin-top: 2em;
-  width: 400px;
-  height: 200px;
-`;
+// const Card = styled.div`
+//   border-radius: 4px;
+//   box-shadow: 0 2px 4px rgba(0.1, 0.1, 0.1, 0.2);
+//   padding: 20px;
+//   margin-top: 2em;
+//   width: 400px;
+//   height: 200px;
+// `;
 const CardTitle = styled.h2`
   font-size: 1.9em;
   margin-bottom: 10px;
@@ -98,9 +98,9 @@ export default function App() {
         onChange={(e) => setLuminosity(e.target.value)}
       />
 
-      <divz style={{ backgroundColor: color }}>
+      <div style={{ backgroundColor: color }}>
         <CardTitle>Generated Color : {color}</CardTitle>
-      </divz>
+      </div>
 
       <Button onClick={colorHandle}>Generate</Button>
     </Wrapper>
