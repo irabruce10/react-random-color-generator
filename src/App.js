@@ -44,7 +44,6 @@ const Input = styled.input`
 `;
 
 const Card = styled.div`
-  background-color: #fff;
   border-radius: 4px;
   box-shadow: 0 2px 4px rgba(0.1, 0.1, 0.1, 0.2);
   padding: 20px;
@@ -100,9 +99,7 @@ export default function App() {
       />
 
       <Card style={{ backgroundColor: color }}>
-        <CardTitle style={{ color: { color } }}>
-          Generated Color : {color}
-        </CardTitle>
+        <CardTitle>Generated Color : {color}</CardTitle>
       </Card>
 
       <Button onClick={colorHandle}>Generate</Button>
