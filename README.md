@@ -7,11 +7,11 @@
 
 # ToDo:
 
-- [x]Searching for a library that generates the color
-- [x]Save the generates color in the variable
-- [x]Create a button which will generate a random color when clicked
-- [x]Create a div where the color will display when the button is clicked
-- [x]Add a text in the div which will write the name of the actual color
+- [x] Searching for a library that generates the color
+- [x] Save the generates color in the variable
+- [x] Create a button which will generate a random color when clicked
+- [x] Create a div where the color will display when the button is clicked
+- [x] Add a text in the div which will write the name of the actual color
 
 ## Stretch Goals
 
