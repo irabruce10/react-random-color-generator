@@ -99,7 +99,7 @@ export default function App() {
       />
 
       <div style={{ background: color }}>
-        <CardTitle>Generated Color : {color}</CardTitle>
+        <CardTitle>Generated Color:{color}</CardTitle>
       </div>
 
       <Button onClick={colorHandle}>Generate</Button>
