@@ -1,15 +1,76 @@
-//  Importng necessary modules and state
+//  Importing necessary modules and state
 
 import { useState } from 'react';
-import './App.css';
-
 import randomColor from 'randomcolor';
+import styled from 'styled-components';
+
+// Styling for the app
+
+const Title = styled.h1`
+  font-size: 2.5em;
+  text-align: center;
+  color: palevioletred;
+  text-transform: capitalize;
+  margin-bottom: 2em;
+  margin-top: -1em;
+`;
+
+const Wrapper = styled.section`
+  padding: 4em;
+  text-align: center;
+`;
+
+const Button = styled.button`
+  margin-top: 2em;
+  padding: 1em 2em;
+  background-color: palevioletred;
+  color: white;
+  border: none;
+  cursor: pointer;
+  font-size: 1.2em;
+`;
+
+const Input = styled.input`
+  padding: 0.5em;
+  font-size: 1em;
+
+  transition: background-color 0.3s ease-in-out;
+  &:focus {
+    background-color: lightpink;
+  }
+  &:hover {
+    background-color: lightcoral;
+  }
+  margin-left: 1em;
+`;
+
+const Card = styled.div`
+  background-color: #fff;
+  border-radius: 4px;
+  box-shadow: 0 2px 4px rgba(0.1, 0.1, 0.1, 0.2);
+  padding: 20px;
+  margin: 10px;
+  margin-left: 25em;
+  margin-top: 2em;
+  width: 400px;
+  height: 200px;
+`;
+const CardTitle = styled.h2`
+  font-size: 1.9em;
+  margin-bottom: 10px;
+  color: #fff;
+  text-transform: capitalize;
+  margin-top: 2.5em;
+  font-weight: bold;
+
+  text-align: center;
+`;
 
 export default function App() {
   // Using React Hooks to manage the state of the application
   const [color, setColor] = useState('#000000');
   const [luminosity, setLuminosity] = useState('');
-  const [hue, setHue] = useState('red');
+  const [hue, setHue] = useState('');
 
   // Setting up parameters for randomColor function
 
@@ -24,35 +85,28 @@ export default function App() {
   }
 
   return (
-    <div className="App">
-      <h1>Welcome to React</h1>
+    <Wrapper className="App">
+      <Title>random color generator web application</Title>
 
-      <input
+      <Input
         type="text"
         placeholder="Hue"
         value={hue}
         onChange={(e) => setHue(e.target.value)}
       />
 
-      <input
+      <Input
         type="text"
         placeholder="luminosity"
         value={luminosity}
         onChange={(e) => setLuminosity(e.target.value)}
       />
 
-      <div
-        style={{
-          width: '300px',
-          height: '100px',
-          backgroundColor: color,
-        }}>
-        Generated Color : {color}
-      </div>
+      <Card style={{ backgroundColor: color }}>
+        <CardTitle>Generated Color : {color}</CardTitle>
+      </Card>
 
-      <div stylee={{ color: `${color}` }}>Random color {color} </div>
-
-      <button onClick={colorHandle}>Click Me</button>
-    </div>
+      <Button onClick={colorHandle}>Generate Me</Button>
+    </Wrapper>
   );
 }
