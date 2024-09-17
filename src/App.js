@@ -3,7 +3,6 @@
 import { useState } from 'react';
 import randomColor from 'randomcolor';
 import styled from 'styled-components';
-import chalk from 'chalk';
 
 // Styling for the app
 
