@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import './App.css';
+import randomColor from 'RandomColor';
 
 export default function App() {
   const [color, setColor] = useState('#000000');
