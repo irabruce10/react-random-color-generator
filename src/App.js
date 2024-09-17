@@ -1,24 +1,40 @@
 import { useState } from 'react';
 import './App.css';
-import randomColor from 'RandomColor';
+
+import randomColor from 'randomcolor';
 
 export default function App() {
   const [color, setColor] = useState('#000000');
   const [luminosity, setLuminosity] = useState('');
-  const [hue, setHue] = useState('');
+  const [hue, setHue] = useState('red');
+
+  const param = {
+    luminosity: luminosity,
+    hue: hue,
+  };
 
   function colorHandle() {
-    const randomColor = '#' + Math.floor(Math.random() * 16777215).toString(16);
-    setColor(randomColor);
+    const colorGenerate = randomColor(param);
+    setColor(colorGenerate);
   }
 
   return (
     <div className="App">
       <h1>Welcome to React</h1>
 
-      <input type="text" placeholder="Hue" />
+      <input
+        type="text"
+        placeholder="Hue"
+        value={hue}
+        onChange={(e) => setHue(e.target.value)}
+      />
 
-      <input type="text" placeholder="luminosity" />
+      <input
+        type="text"
+        placeholder="luminosity"
+        value={luminosity}
+        onChange={(e) => setLuminosity(e.target.value)}
+      />
 
       <div
         style={{
