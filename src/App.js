@@ -17,7 +17,6 @@ const Title = styled.h1`
 
 const Wrapper = styled.section`
   padding: 4em;
-  text-align: center;
 `;
 
 const Button = styled.button`
@@ -49,8 +48,6 @@ const Card = styled.div`
   border-radius: 4px;
   box-shadow: 0 2px 4px rgba(0.1, 0.1, 0.1, 0.2);
   padding: 20px;
-  margin: 10px;
-  margin-left: 25em;
   margin-top: 2em;
   width: 400px;
   height: 200px;
