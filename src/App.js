@@ -103,7 +103,7 @@ export default function App() {
         <CardTitle>Generated Color : {color}</CardTitle>
       </Card>
 
-      <Button onClick={colorHandle}>Generate Me</Button>
+      <Button onClick={colorHandle}>Generate</Button>
     </Wrapper>
   );
 }
