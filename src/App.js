@@ -55,7 +55,7 @@ const Card = styled.div`
 const CardTitle = styled.h2`
   font-size: 1.9em;
   margin-bottom: 10px;
-  color: #fff;
+
   text-transform: capitalize;
   margin-top: 2.5em;
   font-weight: bold;
@@ -100,7 +100,7 @@ export default function App() {
       />
 
       <Card style={{ backgroundColor: color }}>
-        <CardTitle style={{ backgroundColor: color }}>
+        <CardTitle style={{ color: { color } }}>
           Generated Color : {color}
         </CardTitle>
       </Card>
