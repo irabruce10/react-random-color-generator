@@ -98,7 +98,9 @@ export default function App() {
         onChange={(e) => setLuminosity(e.target.value)}
       />
 
-      <div style={{ backgroundColor: color }}>Generated Color:{color}</div>
+      <div style={{ backgroundColor: color }}>
+        <div>Generated Color:{color}</div>
+      </div>
 
       <Button onClick={colorHandle}>Generate</Button>
     </Wrapper>
