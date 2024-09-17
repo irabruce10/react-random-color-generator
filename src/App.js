@@ -98,7 +98,7 @@ export default function App() {
         onChange={(e) => setLuminosity(e.target.value)}
       />
 
-      <div style={{ backgroundColor: color }}>
+      <div style={{ background: color }}>
         <CardTitle>Generated Color : {color}</CardTitle>
       </div>
 
