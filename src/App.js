@@ -51,16 +51,16 @@ const Input = styled.input`
 //   width: 400px;
 //   height: 200px;
 // `;
-const CardTitle = styled.h2`
-  font-size: 1.9em;
-  margin-bottom: 10px;
+// const CardTitle = styled.h2`
+//   font-size: 1.9em;
+//   margin-bottom: 10px;
 
-  text-transform: capitalize;
-  margin-top: 2.5em;
-  font-weight: bold;
+//   text-transform: capitalize;
+//   margin-top: 2.5em;
+//   font-weight: bold;
 
-  text-align: center;
-`;
+//   text-align: center;
+// `;
 
 export default function App() {
   // Using React Hooks to manage the state of the application
