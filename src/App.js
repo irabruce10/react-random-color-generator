@@ -43,24 +43,24 @@ const Input = styled.input`
   margin-left: 1em;
 `;
 
-// const Card = styled.div`
-//   border-radius: 4px;
-//   box-shadow: 0 2px 4px rgba(0.1, 0.1, 0.1, 0.2);
-//   padding: 20px;
-//   margin-top: 2em;
-//   width: 400px;
-//   height: 200px;
-// `;
-// const CardTitle = styled.h2`
-//   font-size: 1.9em;
-//   margin-bottom: 10px;
+const Card = styled.div`
+  border-radius: 4px;
+  box-shadow: 0 2px 4px rgba(0.1, 0.1, 0.1, 0.2);
+  padding: 20px;
+  margin-top: 2em;
+  width: 400px;
+  height: 200px;
+`;
+const CardTitle = styled.div`
+  font-size: 1.9em;
+  margin-bottom: 10px;
 
-//   text-transform: capitalize;
-//   margin-top: 2.5em;
-//   font-weight: bold;
+  text-transform: capitalize;
+  margin-top: 2.5em;
+  font-weight: bold;
 
-//   text-align: center;
-// `;
+  text-align: center;
+`;
 
 export default function App() {
   // Using React Hooks to manage the state of the application
@@ -98,9 +98,11 @@ export default function App() {
         onChange={(e) => setLuminosity(e.target.value)}
       />
 
-      <div style={{ backgroundColor: color }}>
-        <div style={{ backgroundColor: color }}>Generated Color: {color}</div>
-      </div>
+      <Card style={{ backgroundColor: color }}>
+        <CardTitle style={{ backgroundColor: color }}>
+          Generated Color: {color}
+        </CardTitle>
+      </Card>
 
       <Button onClick={colorHandle}>Generate</Button>
     </Wrapper>
