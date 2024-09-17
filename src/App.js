@@ -64,7 +64,7 @@ const CardTitle = styled.h2`
 
 export default function App() {
   // Using React Hooks to manage the state of the application
-  const [color, setColor] = useState('#000000');
+  const [color, setColor] = useState('');
   const [luminosity, setLuminosity] = useState('');
   const [hue, setHue] = useState('');
 
@@ -99,7 +99,7 @@ export default function App() {
       />
 
       <div style={{ background: color }}>
-        <CardTitle>Generated Color:{color}</CardTitle>
+        <h2>Generated Color:{color}</h2>
       </div>
 
       <Button onClick={colorHandle}>Generate</Button>
